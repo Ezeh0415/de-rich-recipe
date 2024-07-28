@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="mx-1 my-1 md:mx-0 md:my-0 text-gray-500 bg-gray-100">
+    <div> <!--contaner start-->
+        <div>  <!--nav bar section or div-->
+            <header class="lg:bg-gray-800 lg:flex lg:text-white lg:p-2 lg:items-center lg:justify-evenly ">
+                <div class="flex items-center justify-between border-b-2 mb-1 md:bg-gray-800 lg:border-none">
+                    <h1 class="uppercase p-2 fonts font-semibold text-gray-700 md:text-white">De rich cook</h1>
+                    <div>
+                        <svg class="w-5 lg:hidden mr-2 text-green-600" id="bar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                          </svg>
+                          
+                    </div>
+                </div>
+                <div class="hidden ">
+                    <a href="#">
+                        <input type="text" name="search" id="search" placeholder="search" class="rounded-md p-2 w-[120%]">
+                    </a>
+                </div>
+                <nav class="hidden lg:block" id="navbar">
+                    <ul class="uppercase text-xs font-bold mt-1 text-end lg:flex lg:items-center lg:w-[150%] lg:justify-evenly">
+                        <li class="mt-1 lg:pt-1">
+                            <a href="#" class="home"> home </a>
+                        </li>
+
+                        <li class="mt-3 border-r-2 lg:border-none lg:mt-1">
+                            <a href="#" class="recipes"> recipes </a>
+                        </li>
+
+                        <li class="mt-3 border-r-2 lg:border-none lg:mt-1">
+                            <a href="#" class="about-us"> about us </a>
+                        </li>
+
+                        <!-- <li class="mt-3 border-r-2 lg:border-none lg:mt-1">
+                            <a href="#" class="contact-us"> contact us </a>
+                        </li> -->
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <main class=" md:mx-4 md:mt-6">
+            <h2 class="capitalize text-gray-800 text-2xl font-bold mt-2 text-green-600 md:text-3xl lg:mt-7">welcome</h2>
+            <div class="capitalize text-4xl text-gray-800 font-bold mb-2 mt-1 md:text-6xl lg:mt-7">
+                <h4>easy recipes</h4>
+                <h4>for any occasion</h4>
+            </div>
+            <p class="mt-4 text-sm text-start capitalize md:w-[60%] md:text-lg lg:mt-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam dicta nisi itaque ipsum illum magnam laboriosam eligendi minima a. Aperiam eum maiores quos sequi repellendus nisi, excepturi saepe nesciunt?</p>
+
+            <div class="mt-5 md:mt-10">
+                <div class="uppercase font-bold text-xl text-gray-800 ml-2 mb-3">
+                    <h3>
+                        what`s new on our table
+                    </h3>
+                </div>
+                <span class="mt-5 flex capitalize text-sm items-end justify-end">
+                    <p>do you want to see more? </p>
+                    <svg class="w-5 ml-2 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                      </svg>
+                      
+                    <p class="ml-1 text-green-400"><a href="#">show all recipes</a></p>
+                </span>
+                <div class=" w-fit mx-auto " id="loading">
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                   </div>
+                   <div class="mx-auto text-center uppercase w-[40%] hidden" id="error">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                      </svg>
+                      
+                      <h2>error fetching data check internet connection and try again</h2>
+                   </div>
+                <div class="md:grid grid-cols-3 gap-5" id="main-card-div"> <!--card main div-->
+                   <!-- <div class="h-44 overflow-hidden object-cover hidden">
+                    < <img src="image/20221022_080028.jpg" alt="" class=" w-full"> --
+                   </div> -->
+                </div>
+            </div>
+
+            <div class="mt-5 border-2 w-[95%] mx-auto capitalize p-8 rounded-sm shadow" id="showMore">
+                <div>
+                    <h5 class="font-extrabold text-sm text-green-600 uppercase mb-4">
+                        check this
+                    </h5>
+                    <h3 class=" text-xl text-gray-800 capitalize mb-4 md:text-2xl">
+                        other recipes
+                    </h3>
+                    <span class="border bg-green-600 text-white p-2 rounded-md capitalize flex w-[50%] md:w-[17%] lg:w-[14%]">
+                        <h2>show all</h2>
+                       <svg class="w-5 ml-2 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+</svg>
+                    </span>
+                </div>
+            </div>
+
+            
+        </main>
+        <footer class="bg-gray-300 capitalize p-2 mt-2">
+            <h2 class="text-sm text-center">2024 de rich cook | all rights reserved | created by Godwin</h2>
+            <span class="flex items-center justify-center mt-2">
+                <svg class="w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+
+                <svg class="w-4 ml-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+
+                <svg class="w-4 ml-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </span>
+        </footer>
+    </div>
+    <script src="js/fetch.db.js"></script>
+    <script src="js/navlink.js"></script>
+    <script src="js/Toggle.js"></script>
+</body>
+</html>

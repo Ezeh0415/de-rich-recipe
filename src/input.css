@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,600&family=Playwrite+AR:wght@100..400&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+    @apply: "border border-gray-900 rounded-lg overflow-hidden relative shadow-lg bg-gray-200 "
+}
+
+.fonts {
+    font-family: "Playwrite AR", cursive;
+}
