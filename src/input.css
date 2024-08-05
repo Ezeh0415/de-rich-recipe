@@ -9,6 +9,6 @@
     @apply: "border border-gray-900 rounded-lg overflow-hidden relative shadow-lg bg-gray-200 "
 }
 
-.fonts {
-    font-family: "Playwrite AR", cursive;
+.btn {
+    @apply: "mt-3 border-2 w-[40%] capitalize ml-[55%] bg-green-400 text-white rounded-md p-1 mb-3"
 }
