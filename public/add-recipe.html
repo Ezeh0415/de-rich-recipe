@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Recipe</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="mx-1 my-1 md:mx-0 md:my-0 text-gray-500 bg-gray-100">
-    <div> <!--contaner start-->
+<body class="bg-gray-100 " >
+    <div>
         <div>  <!--nav bar section or div-->
             <header class="lg:bg-gray-800 lg:flex lg:text-white lg:p-2 lg:items-center lg:justify-evenly ">
                 <div class="flex items-center justify-between border-b-2 mb-1 md:bg-gray-800 lg:border-none">
@@ -46,65 +46,47 @@
                 </nav>
             </header>
         </div>
-        <main class=" md:mx-4 md:mt-6">
-            <h2 class="capitalize text-gray-800 text-2xl font-bold mt-2 text-green-600 md:text-3xl lg:mt-7">welcome</h2>
-            <div class="capitalize text-4xl text-gray-800 font-bold mb-2 mt-1 md:text-6xl lg:mt-7">
-                <h4>easy recipes</h4>
-                <h4>for any occasion</h4>
-            </div>
-            <p class="mt-4 text-sm text-start capitalize md:w-[60%] md:text-lg lg:mt-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam dicta nisi itaque ipsum illum magnam laboriosam eligendi minima a. Aperiam eum maiores quos sequi repellendus nisi, excepturi saepe nesciunt?</p>
 
-            <div class="mt-5 md:mt-10">
-                <div class="uppercase font-bold text-xl text-gray-800 ml-2 mb-3">
-                    <h3>
-                        what`s new on our table
-                    </h3>
+      <main>
+        <main class="mx-2 mt-1 " id="addRecipeText">
+            <div class="md:grid grid-cols-2 gap-5 " >
+               <div  class="p-2">
+                <h1 class="capitalize font-semibold text-green-600 text-2xl">add your own recipe</h1>
+                <div class="mt-5">
+                    <p class="capitalize font-bold text-green-600 text-sm md:text-md xl:text-xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam at veritatis voluptatibus quos quaerat, cumque in quam necessitatibus tempora mollitia.</p>
                 </div>
-                <span class="mt-5 flex capitalize text-sm items-end justify-end">
-                    <p>do you want to see more? </p>
-                    <svg class="w-5 ml-2 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                      </svg>
-                      
-                    <p class="ml-1 text-green-400"><a href="#" class="recipes">show all recipes</a></p>
-                </span>
-                <div class=" w-fit mx-auto " id="loading">
-                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                   </div>
-                   <div class="mx-auto text-center uppercase w-[40%] hidden" id="error">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
-                      </svg>
-                      
-                      <h2>error fetching data check internet connection and try again</h2>
-                   </div>
-                <div class="md:grid grid-cols-3 gap-5" id="main-card-div"> <!--card main div-->
-                   <!-- <div class="h-44 overflow-hidden object-cover hidden">
-                    < <img src="image/20221022_080028.jpg" alt="" class=" w-full"> --
-                   </div> -->
+               </div>
+                <div class="mt-5 p-1 rounded-lg shadow-lg">
+                    <input type="text" id="cookersName" placeholder="cookersName" class="border-2 capitalize w-[95%] mt-2 p-2 rounded-lg">
+                    <input type="text" id="recipeName" placeholder="recipeName" class="border-2 capitalize w-[95%] mt-2 p-2 rounded-lg">
+                    <input type="text" id="recipeDescription" placeholder="description / recipe" class="border-2 capitalize w-[95%] mt-2 p-2 rounded-lg">
+                    <input type="file" id="recipeImage" placeholder="food image" class="border-2 capitalize w-[95%] mt-2 p-2 rounded-lg">
+                    <button type="submit" onclick="handlePost()" class="mt-3 border-2 w-[40%] capitalize ml-[55%] bg-green-400 text-white rounded-md p-1 mb-3">submit recipe</button>
                 </div>
             </div>
-
-            <div class="mt-5 border-2 w-[95%] mx-auto capitalize p-8 rounded-sm shadow" id="showMore">
-                <div>
-                    <h5 class="font-extrabold text-sm text-green-600 uppercase mb-4">
-                        check this
-                    </h5>
-                    <h3 class=" text-xl text-gray-800 capitalize mb-4 md:text-2xl">
-                        other recipes
-                    </h3>
-                    <span class="border bg-green-600 text-white p-2 rounded-md capitalize flex w-[50%] md:w-[17%] lg:w-[14%]">
-                        <h2>show all</h2>
-                       <svg class="w-5 ml-2 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-</svg>
-                    </span>
-                </div>
-            </div>
-
-            
         </main>
-        <footer class="bg-gray-300 capitalize p-2 mt-2">
+
+        <h1 class="mt-2 text-lg font-bold text-center uppercase text-red-500 " id="uploadError"> </h1>
+        <h1 class="mt-2 text-lg font-bold text-center uppercase text-green-500 " id="uploadSuccess"> </h1>
+
+        <div class="mt-3  md:grid grid-cols-2 gap-5" id="newRecipe">
+            <!-- <div class="grid grid-cols-2 p-1 overflow-hidden shadow-gray-500 shadow-md rounded-md">
+                    <div class=" rounded-sm h-20">
+                        <img src="image/images8.jpg" alt="pictue" class="object-cover">
+                    </div>
+                    <div class="p-1">
+                        <h3 class="capitalize text-gray-800 font-bold text-lg">green beans</h3>
+                        <h5 class="capitalize text-gray-600 font-medium text-md">gozie</h5>
+                        <div class="h-20 overflow-scroll ">
+                            <p class="text-xs capitalize font-medium font-mono">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas praesentium atque consequuntur voluptatibus, quod accusamus ipsum officia fuga perspiciatis error!</p>
+                        </div>
+                    </div>
+            </div> -->
+        </div>
+      </main>
+
+
+        <footer class="hidden bg-gray-300 capitalize p-2 mt-2">
             <h2 class="text-sm text-center">2024 de rich cook | all rights reserved | created by Godwin</h2>
             <span class="flex items-center justify-center mt-2">
                 <svg class="w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
@@ -115,6 +97,7 @@
             </span>
         </footer>
     </div>
+
     <script src="js/fetch.db.js"></script>
     <script src="js/navlink.js"></script>
     <script src="js/Toggle.js"></script>

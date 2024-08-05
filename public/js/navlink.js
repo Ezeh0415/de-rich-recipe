@@ -1,6 +1,7 @@
 const home = document.querySelectorAll(".home");
 const recipes = document.querySelectorAll(".recipes");
 const aboutUs = document.querySelectorAll(".about-us");
+const addRecipe = document.querySelectorAll(".add-recipe");
 
 
 
@@ -15,4 +16,8 @@ recipes.forEach(recipe => {
 
 aboutUs.forEach(about => {
     about.href = "aboutUs.html";
+});
+
+addRecipe.forEach(addRecipe => {
+    addRecipe.href = "add-recipe.html";
 });
